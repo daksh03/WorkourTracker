@@ -12,4 +12,8 @@ public interface WorkoutService {
 
 	List<WorkoutDTO> getByMuscleGroup(String muscleGroup);
 
+	List<WorkoutDTO> getByTodayDate();
+
+	String deleteWorkout(int id);
+
 }

@@ -1,5 +1,6 @@
 package com.example.workout_tracker.repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,5 +12,7 @@ import com.example.workout_tracker.entity.Workout;
 public interface WorkoutRepository extends JpaRepository<Workout, Integer> {
 
 	List<Workout> findByMuscleGroup(String muscleGroup);
+
+	List<Workout> findByDate(LocalDate date);
 
 }
